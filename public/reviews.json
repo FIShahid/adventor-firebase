@@ -5,13 +5,15 @@
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
         "img": "https://i.ibb.co/KV9Ddjv/review1.jpg" ,
         "ratings":"⭐⭐⭐⭐⭐"
+        
     },
     {
         "id": 2,
         "name": "Megan Fox",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/zG2NVw5/review2.jpg",
+        "img": "https://i.ibb.co/zG2NVw5/review2.jpg" ,
         "ratings":"⭐⭐⭐⭐⭐"
+        
     },
     {
         "id": 3,
@@ -20,6 +22,7 @@
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
         "img": "https://i.ibb.co/xGLFWRX/review3.jpg",
         "ratings":"⭐⭐⭐⭐⭐"
+        
     }
     
 ]

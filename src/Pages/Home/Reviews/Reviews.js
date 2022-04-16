@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import SingleReview from '../Home/SingleReview/SingleReview';
 
 const Reviews = () => {
-    // const {name ,img ,description , ratings} =review
+    const [reviews, setReviews] = useState([]);
+    useEffect(() => {
+        fetch('reviews.json')
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, []);
     return (
-        <div>
-            <h2>This is Reviews
+        <div className='container'>
+                   <h1 className='text-primary text-center mt-5 mb-4'>Top Reviews for Adventure Travelers</h1>
+            <div className='services-container'>
+               {
+                   reviews.map(review=><SingleReview
+                   key={review.id}
+                   review={review}
+                   ></SingleReview>)
+               }
+            </div>
 
-            </h2>
+            
         </div>
     );
 };
