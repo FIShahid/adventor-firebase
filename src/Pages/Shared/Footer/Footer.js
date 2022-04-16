@@ -1,10 +1,11 @@
 import React from 'react';
+import './Footer.css'
 
 const Footer = () => {
     return (
-        <div>
+        <footer>
             <p><small>copyright @ /dynamic Year/</small></p>
-        </div>
+        </footer>
     );
 };
 

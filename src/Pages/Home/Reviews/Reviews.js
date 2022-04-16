@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import SingleReview from '../Home/SingleReview/SingleReview';
+import SingleReview from '../SingleReview/SingleReview'
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
