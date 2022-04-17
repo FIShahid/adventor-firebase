@@ -7,6 +7,7 @@ import Home from './Pages/Home/Home/Home';
 import Reviews from './Pages/Home/Reviews/Reviews';
 import Services from './Pages/Home/Services/Services';
 import Login from './Pages/Login/Login/Login';
+import SignUp from './Pages/Login/SignUp/SignUp';
 import NotFound from './Pages/Not Found/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
@@ -24,6 +25,7 @@ function App() {
       <Route path='/blogs' element={<Blogs></Blogs>}></Route>
       <Route path='/aboutme' element={<AboutMe></AboutMe>}  ></Route>
       <Route path='/login' element={<Login></Login>}></Route>
+      <Route path='/signup' element={<SignUp></SignUp>}></Route>
       
       <Route path='*' element={<NotFound></NotFound>}></Route>
     </Routes>
