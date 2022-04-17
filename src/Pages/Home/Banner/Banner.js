@@ -14,8 +14,8 @@ const Banner = () => {
       alt="First slide"
     />
     <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      <h3>Dream. Plan. Explore</h3>
+      <p>The world is a book and those who do not travel read only one page..</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -26,8 +26,8 @@ const Banner = () => {
     />
 
     <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <h3>Your Adventure Begins Here</h3>
+      <p>Not all those who wander are lost...</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -38,8 +38,8 @@ const Banner = () => {
     />
 
     <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      <h3>Into the Wild with Me</h3>
+      <p>Life is either a daring adventure or nothing at all.</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>

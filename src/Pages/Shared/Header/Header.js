@@ -14,7 +14,7 @@ const Header = () => {
         <div className='header sticky top' >
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" > 
   <Container>
-  <Navbar.Brand as={Link} to="/">Adventure Travelers</Navbar.Brand>
+  <Navbar.Brand as={Link} to="/">Adventure Traveler</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="ms-auto">
