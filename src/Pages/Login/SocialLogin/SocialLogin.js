@@ -3,6 +3,7 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import google from '../../../images/icon/google.png'
+import Loading from '../../Shared/Loading/Loading';
 
 const SocialLogin = () => {
     
@@ -11,10 +12,11 @@ const SocialLogin = () => {
 
     let errorElement;
     if (error) {
-         errorElement= <div>
-            <p className='text-danger'>Error: {error.message}</p>
-          </div>
-        
+         errorElement= <p className='text-danger'>Error: {error.message}</p>
+          
+      }
+      if(loading){
+          return <Loading></Loading>
       }
       if(user){
         navigate('/home')

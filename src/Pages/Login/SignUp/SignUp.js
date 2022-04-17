@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import './SignUp.css'
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import Loading from '../../Shared/Loading/Loading';
 
 const SignUp = () => {
     const [
@@ -11,38 +12,46 @@ const SignUp = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth , {sendEmailVerification:true});
+
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const navigate = useNavigate()
-    const navigateLogin = () =>{
+    const navigateLogin = () => {
         navigate('/login');
 
     }
-
-    if(user){
-        navigate('/home');
+    if(loading || updating){
+        return <Loading></Loading>
     }
-    const handleRegister = e =>{
-     e.preventDefault();   
-     const name = e.target.name.value;
-     const email = e.target.email.value;
-     const password = e.target.password.value;
 
-     createUserWithEmailAndPassword(email, password);
+    if (user) {
+        // navigate('/home');
+        console.log('user' ,user);
+    }
+    const handleRegister = async (e) => {
+        e.preventDefault();
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+
+
+       await createUserWithEmailAndPassword(email, password);
+       await updateProfile({ displayName:name });
+       console.log('Updated profile');
+       navigate('/home');
     }
     return (
         <div className='signup-form'>
             <h2 className='text-primary text-center mt-3 mb-2'  >Please Sign Up</h2>
             <form onSubmit={handleRegister} >
-                <input type="text" name="name" id="" placeholder='Your Name' />
+                <input type="text" name="name" id="" placeholder='Your Name' required />
 
                 <input type="email" name="email" id="" placeholder='Email Address' required />
 
                 <input type="password" name="password" id="" placeholder='Password' required />
-                {/* <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" /> */}
-                {/* <label className={agree ? 'ps-2': 'ps-2 text-danger'} htmlFor="terms">Accept Genius Car Terms and Conditions</label> */}
-                {/* <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Accept Genius Car Terms and Conditions</label> */}
+
                 <input
-                    
+
                     className='w-100 mx-auto btn btn-primary mt-2'
                     type="submit"
                     value="Sign Up" />
@@ -57,8 +66,8 @@ const SignUp = () => {
             <br />
             <br />
             <br />
-                </div>
-                
+        </div>
+
     );
 };
 
