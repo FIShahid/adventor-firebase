@@ -5,6 +5,9 @@ import './SignUp.css'
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import Loading from '../../Shared/Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const SignUp = () => {
     const [
@@ -30,16 +33,22 @@ const SignUp = () => {
     }
     const handleRegister = async (e) => {
         e.preventDefault();
+
         const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
+        const confirmPassword = e.target.confirmPassword.value;
+        if(password!==confirmPassword){
+            toast('Your Password Did Not Matched!!')
+            return;
+    }
 
-
-        await createUserWithEmailAndPassword(email, password);
+        await createUserWithEmailAndPassword(email, password ,confirmPassword);
         await updateProfile({ displayName: name });
         console.log('Updated profile');
         navigate('/home');
-    }
+    
+}
     return (
         <div className='signup-form'>
             <h2 className='text-primary text-center mt-3 mb-2'  >Please Sign Up</h2>
@@ -49,6 +58,7 @@ const SignUp = () => {
                 <input type="email" name="email" id="" placeholder='Email Address' required />
 
                 <input type="password" name="password" id="" placeholder='Password' required />
+                <input type="password" name="confirmPassword" id="" placeholder='Confirm Password' required />
 
                 <input
 
@@ -59,6 +69,7 @@ const SignUp = () => {
             </form>
             <p>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
             <SocialLogin></SocialLogin>
+            <ToastContainer></ToastContainer>
             <br />
             <br />
             <br />
