@@ -6,7 +6,7 @@
 Project Description
 ***
 
-* This Website is About a Freelance Adventure Travel Guide.
+* This Website is called Adventor. (Adventure + Mentor). It is About a Freelance Adventure Travel Guide.
 * It has different section containing different features.
 * This website has a responsive navbar.
 * A carousal Banner with fade effect.
