@@ -14,7 +14,7 @@ const SocialLogin = () => {
 
     let errorElement;
     if (error) {
-         errorElement= <p className='text-danger'>Error: {error.message}</p>
+         errorElement= <p className='text-danger fw-bold'>❌ Something Went Wrong</p>
           
       }
       if(loading){
