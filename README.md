@@ -1,6 +1,6 @@
-#Project Name: Adventor. 
+# Project Name: Adventor. 
 
-##Live site Link: https://adventure-traveller.firebaseapp.com/
+## Live site Link: https://adventure-traveller.firebaseapp.com/
 
 ***
 Project Description

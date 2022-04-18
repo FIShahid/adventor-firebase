@@ -1,5 +1,5 @@
 import React from 'react';
-import about from '../../../images/about.jpg'
+import about2 from '../../../images/about2.jpg'
 import './introduction.css'
 const Introduction = () => {
     return (
@@ -7,7 +7,7 @@ const Introduction = () => {
             <h1 className='text-primary mt-5 mb-3 text-center'>About Me..</h1>
 
 <div className='col-md-6 p-2 '> 
-                    <img  className='w-100' id='about' src={about} alt="" />
+                    <img  className='w-100' id='about' src={about2} alt="" />
                 </div>
             <div className='col-md-6 shadow-lg ' >
                 
