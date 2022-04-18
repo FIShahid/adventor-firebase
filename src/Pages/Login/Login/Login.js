@@ -1,6 +1,6 @@
 
 import { async } from '@firebase/util';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -31,7 +31,7 @@ const Login = () => {
     }
 
     if (error) {
-        errorElement= <p className='text-danger'>Error: {error.message}</p>       
+        errorElement= <p className='text-danger fw-bold'>❌ User Email or Password Did Not Matched!!!!</p>       
      }
      if(loading || sending){
          return <Loading></Loading>
@@ -58,6 +58,8 @@ const Login = () => {
         }
 
     }
+
+ 
     return (
         <div className='container w-50 mx-auto '>
             <h2 className='text-primary text-center mt-3 mb-2'>Please Login</h2>
@@ -67,12 +69,13 @@ const Login = () => {
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
 
                 </Form.Group>
+                {error?.email && <p className="error-message">{error.email}</p>}
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
-                
+                {error?.password && <p className="error-message">{error.password}</p> }
                 <Button variant="primary" type="submit  " className='w-100 mb-2'>
                     Login
                 </Button>
