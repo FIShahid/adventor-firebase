@@ -5,14 +5,14 @@ import Service from '../Service/Service';
 
 const Services = () => {
     const [services, setServices] = useState([]);
-    
+
 
     useEffect(() => {
         fetch('service.json')
             .then(res => res.json())
             .then(data => setServices(data));
     }, []);
-    
+
 
     return (
         <div className='container' id='services'>
@@ -26,7 +26,7 @@ const Services = () => {
                     ></Service>)
                 }
             </div>
-     
+
 
         </div>
     );

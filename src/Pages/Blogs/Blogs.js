@@ -12,9 +12,9 @@ const Blogs = () => {
             </div>
 
             <div>
-            <h4 className='mt-3 mb-4 '> Why are you using firebase? What other options do you have to implement authentication?</h4>
+                <h4 className='mt-3 mb-4 '> Why are you using firebase? What other options do you have to implement authentication?</h4>
                 <p>
-                    Firebase is now often used in building mobile and web applications.Because it has a large range of services and features like Fast and safe hosting ,Reliable and extensive Database, Google Analytics ,Multi-platform firebase authentication. It is also very beginner friendly. It has a very good and rich documentation. Its also easy to set up and integrate.  
+                    Firebase is now often used in building mobile and web applications.Because it has a large range of services and features like Fast and safe hosting ,Reliable and extensive Database, Google Analytics ,Multi-platform firebase authentication. It is also very beginner friendly. It has a very good and rich documentation. Its also easy to set up and integrate.
 
                     Besides firebase there are many other available systems to implement authentication like Okta , Auth0 , Salesforce ,OneLogin ,Parse etc.
 

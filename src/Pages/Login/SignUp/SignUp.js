@@ -12,7 +12,7 @@ const SignUp = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth , {sendEmailVerification:true});
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true }); //email verification
 
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const navigate = useNavigate()
@@ -20,13 +20,13 @@ const SignUp = () => {
         navigate('/login');
 
     }
-    if(loading || updating){
+    if (loading || updating) {
         return <Loading></Loading>
     }
 
     if (user) {
         // navigate('/home');
-        console.log('user' ,user);
+        console.log('user', user);
     }
     const handleRegister = async (e) => {
         e.preventDefault();
@@ -35,10 +35,10 @@ const SignUp = () => {
         const password = e.target.password.value;
 
 
-       await createUserWithEmailAndPassword(email, password);
-       await updateProfile({ displayName:name });
-       console.log('Updated profile');
-       navigate('/home');
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name });
+        console.log('Updated profile');
+        navigate('/home');
     }
     return (
         <div className='signup-form'>
