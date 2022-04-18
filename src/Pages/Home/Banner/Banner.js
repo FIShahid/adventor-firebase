@@ -14,7 +14,7 @@ const Banner = () => {
       alt="First slide"
     />
     <Carousel.Caption>
-      <h3>Dream. Plan. Explore</h3>
+      <h3>Dream. Plan. Explore.</h3>
       <p>The world is a book and those who do not travel read only one page..</p>
     </Carousel.Caption>
   </Carousel.Item>

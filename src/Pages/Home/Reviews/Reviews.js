@@ -10,7 +10,7 @@ const Reviews = () => {
     }, []);
     return (
         <div className='container' id='reviews'>
-                   <h1 className='text-primary text-center mt-5 mb-4'>Top Reviews for Adventure Travelers</h1>
+                   <h1 className='text-primary text-center mt-5 mb-4 fw-bold'>Top Experiences from Adventor.</h1>
             <div className='services-container'>
                {
                    reviews.map(review=><SingleReview

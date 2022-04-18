@@ -14,11 +14,11 @@ const Service = ({service}) => {
     return (
         <div className='shadow-lg p-2'>
             <img className='w-100' src= {img} alt="" />
-            <h2>{name}</h2>
-            <p>{description}</p>
-            <p>Price: ${price}</p>
+            <h3 className='fw-bold text-success mt-3' >{name}</h3>
+            <p className='fw-bold'>{description}</p>
+            <h6 className='fw-bold text-info mb-4'>Price: ${price}</h6>
             {/* <button onClick={()=>navigateSeeDetail(id)} className='btn btn-primary'>Book Now</button> */}
-            <button onClick ={navigateCheckout} className='btn btn-primary' >Book now</button>
+            <button onClick ={navigateCheckout} className='btn btn-primary w-100' >Book now</button>
         </div>
     );
 };
