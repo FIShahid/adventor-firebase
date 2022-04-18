@@ -1,23 +1,23 @@
 [
     {
         "id": 1,
-        "name": "Mountain Climber",
-        "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "name": "Mountain Climbing",
+        "price": "200",
+        "description": "Besides being a source of beauty and happiness, mountains prepare you for the fights of the life. They not only challenge your physical stamina but mental strength too. Sometimes abstract can teach you more than living beings. So why the delay!! go on a adventure with me on the Mountain. I will provide all the necessary safety Gears and Training ",
         "img": "https://i.ibb.co/C1rYLKF/service1.jpg"
     },
     {
         "id": 2,
-        "name": "Sea Surfer",
-        "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "name": "Deep sea Diving",
+        "price": "300",
+        "description": "Scuba diving allows you to move freely underwater and makes you feel you are part of the marine life. Hardly having to deal with gravity makes you feel like you're weightless and flying into the blue.So why the delay!! go on a adventure with me on the Mountain. I will provide all the necessary safety Gears and Training",
         "img": "https://i.ibb.co/CwhFPqC/servie2.jpg"
     },
     {
         "id": 3,
-        "name": "Forest Hiker",
+        "name": "Into the Wild",
         "price": "150",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Stepping onto a trail is one of the most rewarding feelings; its the promise of adventure, the acknowledgment of difficulty, the dedication to the final ascent. Hiking in the forest is a brilliant way to get moving and do some exercise in a natural environment. We will explore the nature , Also camp during night. I will provide the tents and equipment. ",
         "img": "https://i.ibb.co/vhBRfKB/service3.jpg"
     }
     

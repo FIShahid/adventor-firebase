@@ -11,7 +11,7 @@ const Introduction = () => {
                 </div>
             <div className='col-md-6'>
                 
-                <h6 className='p-2 mt-5'>Hi There... I am <span className='text-info'>Shahid</span>. I am Freelance Travel Guide. I am an Adrenaline Junkie. If you are Looking for Adventure, you came to the right Person. I inspire People to be blessed by exploring the beauty in the Nature and Wild</h6>
+                <h6 className='p-2 mt-5'>Hi There... I am <span className='text-info'>Shahid</span>. I am Freelance Travel Guide. I am an Adrenaline Junkie. If you are Looking for Adventure, you came to the right Person. I inspire People to be blessed by exploring the beauty in the Nature and Wild. I am a certified Mountain Climber and Deep Sea diver. I am also experts in handling wildlife and handle challenges. If you are looking for a solo Adventure or group travel while maintaining safety then contact me.  </h6>
                 </div>
                
         </div>
